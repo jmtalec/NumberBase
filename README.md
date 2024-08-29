@@ -82,6 +82,7 @@ print(hex_num)  # Output: FF (in hexadecimal)
   - `null`: The symbol representing zero in the base.
 
 - **Methods:**
+  - `to_base(base_map: Union[Iterable[object], Bases], null: object=None)`: Initializes a new instance of `self` with the specified base and null value.
   - `__new__(cls, x: int, base_map: Union[Iterable[object], Bases], null: object = None)`: Creates the integer instance.
   - `__init__(self, x: int, base_map: Union[Iterable[object], Bases], null: object = None)`: Initializes the instance with the specified base and null value.
   - `__add__`, `__sub__`, `__mul__`, etc.: Arithmetic operations that preserve the base of the `NumberBase` instance.
