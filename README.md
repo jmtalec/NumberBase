@@ -45,6 +45,8 @@ result = num + 1
 print(repr(result))  # Output: [bn]: D7E
 ```
 
+*See [example.ipynb](./example.ipynb) for more examples*
+
 ### Custom Bases
 
 You can define custom bases by passing an iterable that represents the symbols for that base:
@@ -82,7 +84,6 @@ print(hex_num)  # Output: FF (in hexadecimal)
   - `null`: The symbol representing zero in the base.
 
 - **Methods:**
-  - `to_base(base_map: Union[Iterable[object], Bases], null: object=None)`: Initializes a new instance of `self` with the specified base and null value.
   - `__new__(cls, x: int, base_map: Union[Iterable[object], Bases], null: object = None)`: Creates the integer instance.
   - `__init__(self, x: int, base_map: Union[Iterable[object], Bases], null: object = None)`: Initializes the instance with the specified base and null value.
   - `__add__`, `__sub__`, `__mul__`, etc.: Arithmetic operations that preserve the base of the `NumberBase` instance.
@@ -121,6 +122,4 @@ print(repr(num))  # Example output: [bn]: D7D
 
 The `NumberBase` class offers a flexible way to work with integers in various bases while preserving the base across arithmetic operations. This can be especially useful for tasks involving custom numeral systems or base conversions in Python.
 
-## License
-
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/jmtalec/NumberBase">NumberBase</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/jmtalec">Jean Moïse Talec</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<br><br><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/jmtalec/NumberBase">NumberBase</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/jmtalec">Jean Moïse Talec</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
