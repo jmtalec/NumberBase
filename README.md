@@ -7,6 +7,7 @@
 ## Features
 
 - **Base conversion:** Convert integers to different bases, such as binary, decimal, or custom bases.
+- **Integer conversion:** Converts bases representations such as binary or custom bases to decimal.
 - **Base-preserving arithmetic operations:** Perform arithmetic operations (`+`, `-`, `*`, etc.) while retaining the original base of the numbers.
 - **Immutable properties:** Certain properties like `base`, `base_map`, and `null` are immutable after the object is created.
 - **String representation:** Customize the string and repr representation of the number based on its base.
@@ -14,6 +15,12 @@
 ## Installation
 
 This module is intended to be integrated directly into a Python project. No external dependencies are needed beyond the standard Python library.
+
+However, you can still install it from [pypi](https://pypi.org/project/cbnumber/):
+
+``` bash
+pip install cbnumber
+```
 
 ## Usage
 
@@ -45,8 +52,6 @@ result = num + 1
 print(repr(result))  # Output: [bn]: D7E
 ```
 
-*See [example.ipynb](./example.ipynb) for more examples*
-
 ### Custom Bases
 
 You can define custom bases by passing an iterable that represents the symbols for that base:
@@ -56,6 +61,17 @@ You can define custom bases by passing an iterable that represents the symbols f
 binary_num = NumberBase(25, [0, 1])
 print(binary_num)  # Output: binary representation of 25
 print(binary_num + 1)  # Output: binary representation of 26
+```
+
+### Custom Base to int
+
+You can use the `from_base` method to convert a custom base representation to `int`:
+
+``` python
+# Custom base number (Base 10)
+num = NumberBase.from_base("Hello, World!", ' !,HWdelor')
+print(num) # Hello, World!
+print(int(num)) # 3677820489751
 ```
 
 ### Enum-Based Bases
@@ -74,6 +90,8 @@ hex_num = NumberBase(255, Bases.HEXADECIMAL)
 print(hex_num)  # Output: FF (in hexadecimal)
 ```
 
+*Find more examples [here](https://github.com/jmtalec/NumberBase/blob/main/example.ipynb)*
+
 ## Class Details
 
 ### `NumberBase` Class
@@ -88,6 +106,7 @@ print(hex_num)  # Output: FF (in hexadecimal)
   - `__init__(self, x: int, base_map: Union[Iterable[object], Bases], null: object = None)`: Initializes the instance with the specified base and null value.
   - `__add__`, `__sub__`, `__mul__`, etc.: Arithmetic operations that preserve the base of the `NumberBase` instance.
   - `__repr__()`: Returns a custom string representation of the number in its base.
+  - `__iter__()`: Yields every digit symbols from `NumberBase.base_map`
 
 ### Base Operations
 
@@ -122,4 +141,4 @@ print(repr(num))  # Example output: [bn]: D7D
 
 The `NumberBase` class offers a flexible way to work with integers in various bases while preserving the base across arithmetic operations. This can be especially useful for tasks involving custom numeral systems or base conversions in Python.
 
-*Licensed under MIT*
+*Licensed under MIT.*
