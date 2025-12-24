@@ -16,7 +16,7 @@
 
 This module is intended to be integrated directly into a Python project. No external dependencies are needed beyond the standard Python library.
 
-However, you can still install it from [pypi](https://pypi.org/project/cbnumber/):
+You can install it from the [pip package manager](https://pypi.org/project/cbnumber/) :
 
 ``` bash
 pip install cbnumber
